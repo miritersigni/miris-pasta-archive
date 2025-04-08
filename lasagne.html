@@ -101,29 +101,48 @@
 
                         <br>
 
-                        <p style="color: black;">Description</p>
+                        <p style="color: black;">Lasagna is a type of pasta characterized by its wide, flat sheets, typically rectangular in shape. These sheets can be straight-edged, but they usually feature ruffled borders designed to help hold sauces and fillings more effectively. The term “lasagna” refers both to the pasta itself and to the traditional Italian dish made by layering these pasta sheets with various ingredients. This pasta’s versatility allows for numerous variations. For instance, some recipes incorporate different types of meat sauces, while others use vegetable fillings or alternative cheeses.</p>
                     </div>
         </main>
             
-        <div class="arrow-icons">
-            <img src="images/prev_arrow.png" alt="Prev Arrow">
-            <img src="images/next_arrow.png" alt="Next Arrow">
+        <div class="arrow-container">
+            <a href="fettuccine.html">
+                <div class="arrow-icons">
+                    <img src="images/prev_arrow.png" alt="Prev Arrow" style="margin-right: auto;">
+                </div>
+            </a>
+            <a href="tagliatelle.html">
+                <div class="arrow-icons">
+                    <img src="images/next_arrow.png" alt="Next Arrow" style="margin-left: auto;">
+                </div>
+            </a>
         </div>
         
         <style>
-            .arrow-icons {
+            .arrow-container {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                position: relative;
-                max-width: 100%;
                 padding: 20px;
+                max-width: 100%;
+            }
+        
+            .arrow-icons {
+                display: flex;
+                align-items: center;
+                width: 100%;
             }
         
             .arrow-icons img {
-                width: 10%;
+                width: 100%;
                 height: auto;
                 cursor: pointer;
+                max-width: 80%;
+            }
+        
+            .arrow-container a {
+                width: 10%;
+                text-decoration: none;
             }
         </style>
 

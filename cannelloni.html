@@ -105,25 +105,39 @@
                     </div>
         </main>
             
-        <div class="arrow-icons">
-            <img src="images/prev_arrow.png" alt="Prev Arrow">
-            <img src="images/next_arrow.png" alt="Next Arrow">
+        <div class="arrow-container">
+            <a href="conchiglioni.html">
+                <div class="arrow-icons">
+                    <img src="images/prev_arrow.png" alt="Next Arrow" style="margin-left: auto;">
+                </div>
+            </a>
         </div>
         
         <style>
+            .arrow-container {
+                display: flex;
+                justify-content: flex-start; 
+                align-items: center;
+                padding: 20px;
+                max-width: 100%;
+            }
+        
             .arrow-icons {
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
-                position: relative;
-                max-width: 100%;
-                padding: 20px;
+                width: 100%;
             }
         
             .arrow-icons img {
-                width: 10%;
+                width: 100%;
                 height: auto;
                 cursor: pointer;
+                max-width: 80%;
+            }
+        
+            .arrow-container a {
+                width: 10%;
+                text-decoration: none;
             }
         </style>
 

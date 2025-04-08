@@ -101,29 +101,44 @@
 
                         <br>
 
-                        <p style="color: black;">Description</p>
+                        <p style="color: black;">Spaghetti is one of the most recognizable and widely consumed pasta shapes globally. Its name derives from the Italian word “spaghetto,” meaning “little cord” or “string,” reflecting its long, thin, cylindrical form. Spaghetti strands measure approximately 25 centimeters (10 inches) in length. This pasta type is traditionally made from durum wheat semolina, giving it a firm texture that holds up well during cooking. They are suitable for a variety of sauces, including tomato-based, oil-based, seafood, and cream-based sauces.</p>
                     </div>
         </main>
             
-        <div class="arrow-icons">
-            <img src="images/prev_arrow.png" alt="Prev Arrow">
-            <img src="images/next_arrow.png" alt="Next Arrow">
+        <div class="arrow-container">
+            <a href="fettuccine.html">
+                <div class="arrow-icons">
+                    <img src="images/next_arrow.png" alt="Next Arrow" style="margin-left: auto;">
+                </div>
+            </a>
         </div>
         
+        
         <style>
+            .arrow-container {
+                display: flex;
+                justify-content: flex-end; 
+                align-items: center;
+                padding: 20px;
+                max-width: 100%;
+            }
+        
             .arrow-icons {
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
-                position: relative;
-                max-width: 100%;
-                padding: 20px;
+                width: 100%;
             }
         
             .arrow-icons img {
-                width: 10%;
+                width: 100%;
                 height: auto;
                 cursor: pointer;
+                max-width: 80%;
+            }
+        
+            .arrow-container a {
+                width: 10%;
+                text-decoration: none;
             }
         </style>
 

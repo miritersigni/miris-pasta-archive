@@ -101,29 +101,48 @@
 
                         <br>
 
-                        <p style="color: black;">Description</p>
+                        <p style="color: black;">Fettuccine, translating to "little ribbons" in Italian, is a type of pasta characterized by its long, flat, ribbon-like shape. They are traditionally made from a dough of egg and flour. Fettuccine are commonly available in both fresh and dried forms, making them a staple in various culinary traditions. This spasta shape is renowned for its versatility. Its width and texture make it particularly well-suited to various sauces, from Alfredo to meat-based ragùs.</p>
                     </div>
         </main>
             
-        <div class="arrow-icons">
-            <img src="images/prev_arrow.png" alt="Prev Arrow">
-            <img src="images/next_arrow.png" alt="Next Arrow">
+        <div class="arrow-container">
+            <a href="spaghetti.html">
+                <div class="arrow-icons">
+                    <img src="images/prev_arrow.png" alt="Prev Arrow" style="margin-right: auto;">
+                </div>
+            </a>
+            <a href="lasagne.html">
+                <div class="arrow-icons">
+                    <img src="images/next_arrow.png" alt="Next Arrow" style="margin-left: auto;">
+                </div>
+            </a>
         </div>
         
         <style>
-            .arrow-icons {
+            .arrow-container {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                position: relative;
-                max-width: 100%;
                 padding: 20px;
+                max-width: 100%;
+            }
+        
+            .arrow-icons {
+                display: flex;
+                align-items: center;
+                width: 100%;
             }
         
             .arrow-icons img {
-                width: 10%;
+                width: 100%;
                 height: auto;
                 cursor: pointer;
+                max-width: 80%;
+            }
+        
+            .arrow-container a {
+                width: 10%;
+                text-decoration: none;
             }
         </style>
 
