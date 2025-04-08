@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>History</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <nav style="background-color: #864E47; padding: 40px; height: 100px; box-shadow: 0px 2px 10px; color: #ECDCBF;">
+            <div class="logo-circle"></div>
+            <ul>
+                <li>
+                    <img src="images/about_icon.png" alt="About Icon">
+                    <a href="about.html" style="color: #ECDCBF;">About</a>
+                </li>
+                <li>
+                    <img src="images/history_icon.png" alt="History Icon">
+                    <a href="history.html" style="color: #ECDCBF;">History</a>
+                </li>
+                <li>
+                    <img src="images/categories_icon.png" alt="Categories Icon">
+                    <a href="categories.html" style="color: #ECDCBF;">Categories</a>
+                </li>
+                <li>
+                    <img src="images/map_icon.png" alt="Map Icon">
+                    <a href="#" style="color: #ECDCBF;">Map</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <style>
+            body {
+                background-color: #864E47; 
+            }
+        </style>
+        
+        <main>
+            <section class="headline-section">
+            <h1>History</h1>
+            <div class="info-section">
+            <div class="image-container">
+                <img src="images/history_pasta.png" alt="About Image" style="width: 80%; height: 90%;">
+                </div>
+                <div class="info-text">
+                    <p>Pasta, in its various forms, is a representation of Italian cuisine. Pasta's roots in Italy trace back to ancient civilizations. It has been introduced to Italy through different cultural influences over time. Its origins are widely debated. In the 9th century CE, Arab traders and conquerors introduced “itriyya” to Sicily, a dried durum wheat noodle. This innovation is considered a predecessor to modern spaghetti, significantly influencing pasta’s development in Italy. The earliest records of pasta-like food date back to the 13th century, though some historians trace its beginnings even further to the ancient civilizations of Greece and Rome. The Romans enjoyed dishes resembling pasta, such as “laganum,” a flatbread cut into strips and boiled. These early forms laid the foundation for Italy’s rich pasta tradition, which later spread across the Mediterranean world.</p>
+                    <br>
+                    <p>By the Middle Ages, pasta had become a common dish enjoyed throughout Italy. Its popularity continued to grow, and by the Renaissance, it was commonly served at royal and aristocratic banquets, with chefs creating elaborate dishes combining various ingredients. In the 14th century, the Italian writer and poet Giovanni Boccaccio mentioned pasta dishes like macaroni and ravioli in his book The Decameron, showing how widely loved pasta had become.</p>
+                    <br>
+                    <p>The 19th century marked a turning point in pasta production. The invention of pasta machines allowed for mechanized production, making pasta more affordable and accessible. Companies like De Cecco and Barilla emerged, utilizing indoor drying machines to produce high-quality pasta on a large scale. This mechanization led to the development of a wide range of pasta shapes. The diverse Italian regions produced unique pasta forms, often designed to complement local sauces and ingredients. This production helped each region shape its own identity over time. Today, Italy’s commitment to preserving traditional pasta-making methods coexists with modern production techniques, ensuring that both authenticity and innovation continue to thrive in Italian cuisine.</p>
+                    <br>
+                    <p>Italian immigrants played a crucial role in popularizing pasta worldwide. In the late 19th and early 20th centuries, they introduced traditional dishes to the United States, such as spaghetti and meatballs and macaroni and cheese, which have since become integral to American cuisine. Another interesting example is the countries of Argentina, Uruguay, and Paraguay, which developed a tradition of eating gnocchi on the 29th of each month, a custom rooted in Italian heritage. ​Today, pasta is enjoyed globally, with hundreds of known shapes, each designed to complement specific sauces and dishes. This vast diversity reflects regional preferences and the rich history of pasta’s evolution across different cultures.</p>
+                </div>
+            </div>
+            </section>
+        </main>
+
+        <style>
+            .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px;
+            position: relative;
+            }
+
+            .info-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5%;
+            max-width: 100%;
+            margin: 100px auto;
+            border-radius: 10px;
+            gap: 20px;
+            font-size: 1.2rem;
+            background-color: #ECDCBF;
+            }
+
+            .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            max-width: 100%;
+            }
+
+            .image-container img {
+            width: 100%;
+            max-width: 80%;
+            height: auto;
+            border: 2px solid #ECDCBF;
+            padding: 0px; 
+            border-radius: 8px;
+            }
+
+            .info-text {
+            flex: 1;
+            text-align: left;
+            max-width: 70%;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            color: black;
+            }
+
+            @media (max-width: 768px) {
+            .info-section {
+            flex-direction: column; 
+            padding: 10%;
+            }
+
+            .image-container {
+            max-width: 100%; 
+            }
+
+            .image-container img {
+            max-width: 90%;
+            }
+
+            .info-text {
+            font-size: 1rem;
+            }
+            }
+
+            @media (max-width: 480px) {
+            .info-text {
+            font-size: 0.9rem;
+            }
+            }
+
+            .info-text {
+            max-width: 100%;
+            }
+        </style>
+
+<div class="arrow-container">
+    <a href="about.html">
+        <div class="arrow-icons">
+            <img src="images/prev_arrow.png" alt="Prev Arrow" style="margin-right: auto;">
+        </div>
+    </a>
+    <a href="categories.html">
+        <div class="arrow-icons">
+            <img src="images/next_arrow.png" alt="Next Arrow" style="margin-left: auto;">
+        </div>
+    </a>
+</div>
+
+<style>
+    .arrow-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .arrow-icons {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .arrow-icons img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        max-width: 80%;
+    }
+
+    .arrow-container a {
+        width: 10%;
+        text-decoration: none;
+    }
+</style>
+
+        <footer>
+            <br>
+            <br>
+            <br>
+            <br>
+            © 2025 Miriana Tersigni | All Rights Reserved
+            <div class="contact">
+                <div class="circle"></div>
+                <ul>
+                    <li>
+                        <img src="images/email_icon.png" alt="Email Icon">
+                        mirit2005@gmail.com
+                    </li>
+                    <li>
+                        <img src="images/phone_icon.png" alt="Phone Icon">
+                        +1 (416) 579-6807
+                    </li>
+                    <li>
+                        <img src="images/insta_icon.png" alt="Instagram Icon">
+                        @miritersignii
+                    </li>
+                    <li>
+                        <img src="images/linkedin_icon.png" alt="LinkedIn Icon">
+                        miriana-tersigni
+                    </li>
+                </ul>
+            </div>
+        </footer>          
+
+        <script src="script.js"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+
+
+    </body>
+
+</html>
