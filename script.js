@@ -1,20 +1,30 @@
 const map = L.map('map');
 
-map.setView([41.8719, 12.5674], 12);
+map.setView([41.8719, 12.5674], 6);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-const italyBounds = [
-    [37.0, 7.5],
-    [46.0, 17.5]
-];
+let screenRectangle = L.rectangle(map.getBounds(), {
+    color: "#C5B79F",
+    weight: 0,
+    fillColor: "#C5B79F",
+    fillOpacity: 0.4
+}).addTo(map);
 
-map.fitBounds(italyBounds);
+function updateRectangleOverlay() {
+    screenRectangle.setBounds(map.getBounds());
+}
+
+updateRectangleOverlay();
+
+map.on('moveend', updateRectangleOverlay);
+map.on('zoomend', updateRectangleOverlay);
 
 window.addEventListener('resize', function() {
-    map.fitBounds(italyBounds);
+    map.invalidateSize();
+    updateRectangleOverlay();
 });
 
 const regions = [
@@ -41,11 +51,23 @@ const regions = [
 ];
 
 function createIcon(iconPath) {
+    let iconSize;
+
+    if (iconPath.includes('long_icon')) {
+        iconSize = [40, 40];
+    } else if (iconPath.includes('short_icon')) {
+        iconSize = [35, 35];
+    } else if (iconPath.includes('filled_icon')) {
+        iconSize = [30, 30];
+    } else if (iconPath.includes('soup_icon')) {
+        iconSize = [35, 35];
+    }
+
     return new L.Icon({
         iconUrl: iconPath,
-        iconSize: [30, 30],
-        iconAnchor: [16, 32],
-        popupAnchor: [0, -32]
+        iconSize: iconSize,
+        iconAnchor: [iconSize[0] / 2, iconSize[1]],
+        popupAnchor: [0, -iconSize[1]]
     });
 }
 
@@ -66,13 +88,4 @@ regions.forEach(function(region) {
     const marker = L.marker([region.lat, region.lng], { icon: customIcon }).addTo(map);
     
     marker.bindPopup(createPopupContent(region));
-
-    marker.on('mouseover', function() {
-        marker.openPopup();
-    });
-
-    marker.on('mouseout', function() {
-        marker.closePopup();
-    });
 });
-

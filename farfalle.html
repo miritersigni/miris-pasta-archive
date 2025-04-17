@@ -14,61 +14,51 @@
     </head>
 
     <body>
-            <body>
-                <nav style="background-color: #864E47; padding: 40px; height: 100px; box-shadow: 0px 2px 10px; color: #ECDCBF;">
-                    <a href="index.html" style="display: inline-block;">
-                    <div class="logo-circle"></div>
-                    <ul>
-                        <li>
-                            <img src="images/about_icon.png" alt="About Icon">
-                            <a href="about.html" style="color: #ECDCBF;">About</a>
-                        </li>
-                        <li>
-                            <img src="images/history_icon.png" alt="History Icon">
-                            <a href="history.html" style="color: #ECDCBF;">History</a>
-                        </li>
-                        <li>
-                            <img src="images/categories_icon.png" alt="Categories Icon">
-                            <a href="categories.html" style="color: #ECDCBF;">Categories</a>
-                        </li>
-                        <li>
-                            <img src="images/map_icon.png" alt="Map Icon">
-                            <a href="map.html" style="color: #ECDCBF;">Map</a>
-                        </li>
-                    </ul>
-                </nav>
+      <head>
+
+        <nav>
+          <a href="index.html">
+            <img src="images/pasta_archive_logo.png" alt="Logo">
+          </a>
+        
+          <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+        
+          <ul class="nav-links">
+            <li>
+              <img src="images/about_icon.png" alt="About Icon">
+              <a href="about.html">About</a>
+            </li>
+            <li>
+              <img src="images/history_icon.png" alt="History Icon">
+              <a href="history.html">History</a>
+            </li>
+            <li>
+              <img src="images/categories_icon.png" alt="Categories Icon">
+              <a href="categories.html">Categories</a>
+            </li>
+            <li>
+              <img src="images/map_icon.png" alt="Map Icon">
+              <a href="map.html">Map</a>
+            </li>
+          </ul>
+        </nav>
+  
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+        
+            hamburger.addEventListener('click', () => {
+              navLinks.classList.toggle('active');
+            });
+          });
+        </script>
+        
+      </head>
                 
         <main>
             <section class="headline-section">
                 <h1>Farfalle</h1>
-                
-                <style>
-                    ul.breadcrumb {
-                      padding: 10px 16px;
-                      list-style: none;
-                      background-color: #864E47;
-                    }
-                    ul.breadcrumb li {
-                      display: inline;
-                      font-size: 18px;
-                    }
-                    ul.breadcrumb li+li:before {
-                      padding: 8px;
-                      color: black;
-                      content: "/\00a0";
-                    }
-                    ul.breadcrumb li a {
-                      color: #C5B79F;
-                      text-decoration: none;
-                    }
-                    ul.breadcrumb li a:hover {
-                      color: black;
-                      text-decoration: underline;
-                    }
-                    ul.breadcrumb li:current {
-                      color: #FBF8F2;
-                    }
-                </style>
                     
                 <br>
 
@@ -104,6 +94,141 @@
                         <p style="color: black;">Farfalle is a type of pasta known for its distinctive bow-tie or butterfly shape. In fact, its name is the plural form of the Italian word “farfalla”, which translates to “butterfly.” Each piece is crafted from a small rectangle of pasta dough. The edges of the rectangle are often cut with a fluted pasta cutter to create a zigzag pattern. The center of the rectangle is then pinched together, resembling a bow tie or butterfly. This provides a thicker texture, while the flared edges are thinner and more delicate. This combination allows farfalle to hold onto sauces effectively, making it suitable for various dishes.</p>
                     </div>
         </main>
+
+        <style>
+            .slideshow-container {
+              background-color: #864E47;
+            }
+        
+            .prev:hover {
+              color: #864E47;
+              background-color: #C5B79F;
+            }
+
+            .next:hover {
+              color: #8b5146;
+              background-color: #C5B79F;
+            }
+        
+            .active, .dot:hover {
+              background-color: #C5B79F;
+            }
+          </style>
+        </head>
+    
+        <body>
+        
+        <div class="slideshow-container" onmouseenter="pauseSlides()" onmouseleave="resumeSlides()">
+        
+          <div class="mySlides fade">
+            <img src="images/slideshow_1.png" style="width:30%; height:30%; margin: 0 auto; display: block;">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="images/slideshow_2.png" style="width:30%; height:30%; margin: 0 auto; display: block;">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="images/slideshow_3.png" style="width:30%; height:30%; margin: 0 auto; display: block;">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="images/slideshow_4.png" style="width:30%; height:30%; margin: 0 auto; display: block;">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="images/slideshow_5.png" style="width:30%; height:30%; margin: 0 auto; display: block;">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="images/slideshow_6.png" style="width:30%; height:30%; margin: 0 auto; display: block;">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="images/slideshow_7.png" style="width:30%; height:30%; margin: 0 auto; display: block;">
+          </div>
+        
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+          <span class="dot" onclick="currentSlide(5)"></span> 
+          <span class="dot" onclick="currentSlide(6)"></span> 
+          <span class="dot" onclick="currentSlide(7)"></span> 
+        </div>
+        
+        <script>
+          let slideIndex = 1;
+          let autoScroll = true;
+          let slideTimer;
+          let resumeTimer;
+        
+          function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            const dots = document.getElementsByClassName("dot");
+        
+            if (n > slides.length) slideIndex = 1;
+            if (n < 1) slideIndex = slides.length;
+        
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+        
+            for (i = 0; i < dots.length; i++) {
+              dots[i].classList.remove("active");
+            }
+        
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].classList.add("active");
+          }
+        
+          function plusSlides(n) {
+            stopAutoScrollTemporarily();
+            showSlides(slideIndex += n);
+          }
+
+          function currentSlide(n) {
+            stopAutoScrollTemporarily();
+            showSlides(slideIndex = n);
+          }
+
+          function autoShowSlides() {
+            slideIndex++;
+            showSlides(slideIndex);
+            slideTimer = setTimeout(autoShowSlides, 2000);
+          }
+        
+          function stopAutoScrollTemporarily() {
+            clearTimeout(slideTimer);
+            clearTimeout(resumeTimer);
+            autoScroll = false;
+            resumeTimer = setTimeout(() => {
+            autoScroll = true;
+            autoShowSlides();
+          }, 2000);
+          }
+
+          function pauseSlides() {
+            autoScroll = false;
+            clearTimeout(slideTimer);
+          }
+        
+          function resumeSlides() {
+            if (!autoScroll) return;
+            autoShowSlides();
+          }
+        
+          showSlides(slideIndex);
+          slideTimer = setTimeout(autoShowSlides, 2000);
+        </script>
             
         <div class="arrow-container">
             <a href="fusilli.html">
@@ -146,34 +271,51 @@
             }
         </style>
 
-        <footer>
-            <br>
-            <br>
-            <br>
-            <br>
-            © 2025 Miriana Tersigni | All Rights Reserved
-            <div class="contact">
-                <div class="circle"></div>
-                <ul>
-                    <li>
-                        <img src="images/email_icon.png" alt="Email Icon">
-                        mirit2005@gmail.com
-                    </li>
-                    <li>
-                        <img src="images/phone_icon.png" alt="Phone Icon">
-                        +1 (416) 579-6807
-                    </li>
-                    <li>
-                        <img src="images/insta_icon.png" alt="Instagram Icon">
-                        @miritersignii
-                    </li>
-                    <li>
-                        <img src="images/linkedin_icon.png" alt="LinkedIn Icon">
-                        miriana-tersigni
-                    </li>
-                </ul>
-            </div>
-        </footer>         
+<footer>
+  <div class="footer-icons-line">
+    <img src="images/spaghetti_sketch.png">
+    <img src="images/penne_sketch.png">
+    <img src="images/ditali_sketch.png">
+    <img src="images/ravioli_sketch.png">
+    <img src="images/fettuccine_sketch.png">
+    <img src="images/fusilli_sketch.png">
+    <img src="images/stelle_sketch.png">
+    <img src="images/tortellini_sketch.png">
+    <img src="images/lasagne_sketch.png">
+    <img src="images/farfalle_sketch.png">
+    <img src="images/risoni_sketch.png">
+    <img src="images/conchiglioni_sketch.png">
+    <img src="images/tagliatelle_sketch.png">
+    <img src="images/gnocchi_sketch.png">
+    <img src="images/anelli_sketch.png">
+    <img src="images/cannelloni_sketch.png">
+  </div>
+  <div class="footer-content">
+    <p style="margin-top: 75px; text-align: left; font-size: 1rem;"><strong><u><a href="credits.html" style="color: inherit; text-decoration: none;">Credits</a></u> <br> <br> Designed with <span style="color: #8b5146;">♥︎</span> by Miriana Tersigni</strong></p>
+      <div class="contact">
+      <div class="circle"></div>
+        <ul>
+          <p style="font-size: 1rem;"><strong>Get in Touch ☺</strong></p>
+          <br>
+          <li>
+      <img src="images/email_icon.png" alt="Email Icon">
+          <a href="mailto:mirit2005@gmail.com" style="color: #8b5146; text-decoration: none;">mirit2005@gmail.com</a>
+          </li>
+          <li>
+      <img src="images/insta_icon.png" alt="Instagram Icon">
+          <a href="https://www.instagram.com/miritersignii/" target="_blank" style="color: #8b5146; text-decoration: none;">@miritersignii</a>
+          </li>
+          <li>
+      <img src="images/linkedin_icon.png" alt="LinkedIn Icon">
+          <a href="https://www.linkedin.com/in/miriana-tersigni-95b2952a3" target="_blank" style="color: #8b5146; text-decoration: none;">miriana-tersigni</a>
+          </li>
+        </ul>
+  </div>
+      <hr class="footer-line">
+      <div class="footer-note">
+          © 2025 Miriana Tersigni | All Rights Reserved</strong></p>
+      </div>
+</footer>
         
         <script src="script.js"></script>
 
