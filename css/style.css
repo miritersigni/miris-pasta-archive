@@ -97,7 +97,7 @@ nav li a {
 }
 
 /* BREAKPOINT: Responsive nav adjustments for mobile */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
     .hamburger {
       display: block;
       top: 5%;
@@ -233,7 +233,7 @@ footer {
 }
 
 /* BREAKPOINT: Responsive footer adjustments for mobile */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
     .footer-content {
         align-items: flex-start;
     }
@@ -325,7 +325,7 @@ p {
 }
 
 /* BREAKPOINT: Responsive font adjustments for mobile */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
     h1 {
       font-size: 2rem;
     }
@@ -383,7 +383,7 @@ p {
 }
 
 /* BREAKPOINT: Responsive font adjustments for mobile */
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 375px) {
     .text {
       font-size: 11px;
     }
@@ -534,7 +534,7 @@ p {
 }
 
 /* BREAKPOINT: Responsive pasta cards layout for mobile */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
     .pasta-grid {
         grid-template-columns: repeat(1, 1fr);
         grid-template-columns: 1fr;
@@ -627,7 +627,7 @@ a {
 }
 
 /* BREAKPOINT: Responsive pasta cards layout for mobile */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
     .pasta-category-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -689,7 +689,7 @@ a {
 }
 
 /* BREAKPOINT: Responsive pasta posts layout for mobile */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
     .pasta-post-info-section {
         flex-direction: column; 
         padding: 10%;
