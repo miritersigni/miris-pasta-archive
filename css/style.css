@@ -37,6 +37,7 @@ nav {
     justify-content: space-between;
     z-index: 1000;
     background-color: #864E47;
+    
 }
 
 nav img {
@@ -111,10 +112,10 @@ nav li a {
       position: absolute; 
       gap: 10px;
       width: 100%;
-      top: 20%;
+      top: 100px;
       right: 0;
-      width: 40%;
-      height: 25vh;
+      width: 80vw;
+      height: 30vh;
       background-color: #864E47;
       padding: 20px;
       z-index: 1000;
@@ -134,7 +135,9 @@ nav li a {
       position: relative;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;  
+      align-items: center; 
+      padding: 20px 10px;
+      height: auto;
     }
 
     nav li {
@@ -144,6 +147,7 @@ nav li a {
       margin-bottom: 10px;
       width: 80%;
       display: block;
+      
     }
 
     nav li:last-child {
@@ -382,13 +386,6 @@ p {
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* BREAKPOINT: Responsive font adjustments for mobile */
-@media only screen and (max-width: 375px) {
-    .text {
-      font-size: 11px;
-    }
-}
-
 /* Arrows for slideshow navigation */
 .prev, .next {
     cursor: pointer;
@@ -432,6 +429,37 @@ p {
 
 .dot.active {
     transform: scale(0.8);
+}
+
+/* BREAKPOINT: Responsive slideshow adjustments for mobile */
+@media only screen and (max-width: 375px) {
+    .text {
+      font-size: 11px;
+    }
+    .prev, .next {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        margin-top: -20px;
+    }
+
+    .prev {
+        left: 20px;
+    }
+
+    .next {
+        right: 20px;
+    }
+
+    .dot {
+        height: 5px;
+        width: 5px;
+        margin: 0 1.5px;
+    }
+
+    .dot.active {
+        transform: scale(1.7);
+    }
 }
 
 
