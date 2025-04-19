@@ -1,79 +1,32 @@
-/* HOMEPAGE */
+/* ======= */
+/*  FONTS  */
+/* ======= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-header {
-    width: 100%;
-    margin: 0;
-}
-
-header img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 0;
-}
-
-.content {
-    padding: 20px;
-}
-
-body {
+@font-face {
     font-family: 'Darumadrop One', sans-serif;
-    background-color: #5a6c50;
-    margin: 0;
-    padding: 0;
-    color: #f4f1e6;
-    text-align: center;
+    src: url('fonts/DarumadropOne-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
 
-h1, h2, li, nav, footer {
-    font-family: 'Darumadrop One', sans-serif;
-}
-
-h1 {
-    font-size: 4rem; 
-    margin: 0;
-    top: 30%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-p {
+@font-face {
     font-family: 'Copse', serif;
-    font-size: 1rem;
-    line-height: 1.5;
+    src: url('fonts/Copse-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
 
-@media (max-width: 768px) {
-    h1 {
-      font-size: 2rem;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-    }
-  
-    p {
-      font-size: 0.8rem;
-    }
-}
 
+
+
+/* ================= */
+/*   NAVIGATION BAR  */
+/* ================= */
+
+/* Nav bar styling */
 nav {
+    position: sticky;
+    top: 0;
     padding: 40px;
     height: 100px;
     box-shadow: 0px 2px 7px;
@@ -82,15 +35,22 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
     z-index: 1000;
+    background-color: #864E47;
 }
 
+nav img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Logo inside nav */
 nav a img {
     height: 60px;
     width: auto;
 }
 
+/* Nav layout */
 nav ul {
     display: flex;
     gap: 20px;
@@ -99,20 +59,32 @@ nav ul {
     padding: 0;
 }
 
+/* Nav items */
 nav li {
     display: flex;
-    align-items: center
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 nav li img {
     margin-right: 7px;
 }
 
+/* Nav links */
 nav li a {
     color: #ECDCBF;
     text-decoration: none;
 }
 
+/* Hamburger menu styles (mobile only) */
 .hamburger {
     display: none;
     font-size: 2rem;
@@ -124,6 +96,7 @@ nav li a {
     z-index: 1001;
 }
 
+/* BREAKPOINT: Responsive nav adjustments for mobile */
 @media (max-width: 768px) {
     .hamburger {
       display: block;
@@ -178,91 +151,18 @@ nav li a {
     }
 }
 
+/* Make all images align to the middle of text lines */
 img {
     vertical-align: middle;
 }
 
-.mySlides {
-    display: none;
-  }
 
-.slideshow-container {
-    max-width: 70%;
-    aspect-ratio: 16 / 6;
-    position: relative;
-    margin: auto;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
 
-  @keyframes fade {
-    from {opacity: 0.4} 
-    to {opacity: 1}
-  }
+/* ============= */
+/*    FOOTER     */
+/* ============= */
 
-.slideshow-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-}
-  
-@media only screen and (max-width: 300px) {
-    .text {
-      font-size: 11px;
-    }
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    margin-top: -25px;
-    color: #C5B79F;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    user-select: none;
-    border: 2px solid #C5B79F;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.prev {
-    left: 70px;
-}
-
-.next {
-    right: 70px;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #C5B79F;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.4s ease;
-}
-
-.dot.active {
-    transform: scale(0.8);
-}
-  
 footer {
     background-color: #C5B79F;
     padding: 20px;
@@ -310,6 +210,29 @@ footer {
     height: auto;
 }
 
+.contact {
+    text-align: left;
+    display: inline-block;
+    padding: 10px;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact li {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.contact img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* BREAKPOINT: Responsive footer adjustments for mobile */
 @media (max-width: 768px) {
     .footer-content {
         align-items: flex-start;
@@ -333,32 +256,192 @@ footer {
 
 
 
-/* ABOUT & HISTORY */
+/* ============== */
+/*    HOMEPAGE    */
+/* ============== */
 
-body {
-    background-color: #5A6A50;
-    font-family: 'Darumadrop One', sans-serif;
-    color: #F8E8C3;
-    text-align: center;
+/* Reset default margins and paddings across all elements */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    list-style: none;
+/* Header image setup */
+header {
+    width: 100%;
+    margin: 0;
+    padding: 1%;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 0;
+}
+
+/* Main content */
+.content {
     padding: 20px;
 }
 
-nav ul li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: bold;
+/* Body styling */
+body {
+    font-family: 'Darumadrop One', sans-serif;
+    background-color: #5a6c50;
+    margin: 0;
+    padding: 0;
+    color: #f4f1e6;
+    text-align: center;
 }
 
+/* Headings and global text styles */
+h1, h2, li, nav, footer {
+    font-family: 'Darumadrop One', sans-serif;
+}
+
+h1 {
+    font-size: 4rem; 
+    margin: 0;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #ECDCBF;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ECDCBF;
+}
+
+p {
+    font-family: 'Copse', serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: black;
+}
+
+/* BREAKPOINT: Responsive font adjustments for mobile */
+@media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 0.8rem;
+    }
+}
+
+
+
+/* ============== */
+/*   SLIDESHOW    */
+/* ============== */
+
+/* Hide all slides by default */
+.mySlides {
+    display: none;
+  }
+
+  /* Slideshow container styles */
+.slideshow-container {
+    max-width: 70%;
+    aspect-ratio: 16 / 6;
+    position: relative;
+    margin: auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* Zoom on hover */
+@keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
+.slideshow-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* BREAKPOINT: Responsive font adjustments for mobile */
+@media only screen and (max-width: 300px) {
+    .text {
+      font-size: 11px;
+    }
+}
+
+/* Arrows for slideshow navigation */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin-top: -28px;
+    color: #ECDCBF;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    user-select: none;
+    border: 2px solid #ECDCBF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.prev {
+    left: 70px;
+}
+
+.next {
+    right: 70px;
+}
+
+/* Dots for slideshow indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #C5B79F;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.4s ease;
+}
+
+.dot.active {
+    transform: scale(0.8);
+}
+
+
+
+
+/* ================= */
+/*  ABOUT & HISTORY  */
+/* ================= */
+
+/* Headline section style */
 .headline-section {
     display: flex;
     flex-direction: column;
@@ -367,6 +450,7 @@ nav ul li {
     position: relative;
 }
 
+/* Styled info section with image and text side-by-side */
 .info-section {
     display: flex;
     justify-content: space-between;
@@ -379,12 +463,14 @@ nav ul li {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Wrapper for images in the info section */
 .image-container {
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
+/* Styling for images inside the image-container */
 .image-container img {
     width: 80%;
     height: auto;
@@ -392,14 +478,7 @@ nav ul li {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
-.info-text {
-    flex: 1;
-    text-align: left;
-    max-width: 500px;
-    padding: 30px;
-    border-radius: 8px;
-}
-
+/* Removes bullet points and default padding for contact list */
 .contact ul {
     list-style: none;
     padding: 0;
@@ -408,28 +487,11 @@ nav ul li {
 
 
 
-/* CATEGORIES */
+/* ============= */
+/*  CATEGORIES   */
+/* ============= */
 
-header {
-    padding: 20px;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-}
-
-nav li {
-    margin: 0 20px;
-}
-
-nav img {
-    width: 40px;
-    height: 40px;
-}
-
+/* Grid layout for pasta category cards */
 .pasta-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -438,6 +500,7 @@ nav img {
     margin: 2% auto;
 }
 
+/* Individual pasta card styling */
 .pasta-card {
     display: flex;
     flex-direction: row;
@@ -450,27 +513,31 @@ nav img {
     gap: 5%;
     text-decoration: none;
     width: 100%;
-    min-height: 45vh;
+    min-height: 30vh;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Image styling inside each pasta card */
 .pasta-card img {
-    width: 65%;
-    height: 95%;
+    width: 60%;
+    height: 90%;
     border-radius: 8px;
     flex-shrink: 0;
     object-fit: cover;
     border: 2px solid #864E47;
 }
 
+/* Pasta card title */
 .pasta-card h2 {
     margin: 3% 0;
-    font-size: 160%;
+    color: #864E47;
 }
 
+/* BREAKPOINT: Responsive pasta cards layout for mobile */
 @media (max-width: 768px) {
     .pasta-grid {
         grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
         gap: 2%
     }
 
@@ -481,82 +548,41 @@ nav img {
         padding: 5%;
     }
 
+    pasta-card {
+        font-size: 1.5rem;
+    }
+
     .pasta-card img {
         width: 80%;
         height: auto;
     }
 }
 
-.contact {
-    text-align: left;
-    display: inline-block;
-    padding: 10px;
-}
-
-.contact ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contact li {
-    display: flex;
-    align-items: center;
-    margin: 5px 0;
-}
-
-.contact img {
-    width: 20px;
-    margin-right: 10px;
-}
-
-@media (max-width: 768px) {
-    .pasta-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .pasta-card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .pasta-card img {
-        max-width: 100%;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-}
 
 
 
+/* ================ */
+/*  PASTA CATEGORY  */
+/* ================ */
 
-/* PASTA CATEGORY */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FAF3E0;
-    text-align: center;
-}
-
+/* Grid layout for pasta category cards */
 .pasta-category-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 30px;
     max-width: 95%;
-    margin: 100px auto;
+    margin: 40px auto;
     align-items: center;
 }
 
+/* Styling for each individual pasta category card */
 .pasta-category-card {
     display: flex;
     flex-direction: row;
     background-color: #ECDCBF;
-    color: #8b5146;
-    padding: 30px;
+    color: #5A6A50;
+    padding: 40px;
     gap: 20px; 
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -564,9 +590,10 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
 }
 
+/* Alternating vertical movement for card layout flair */
 .pasta-category-card:nth-child(odd) {
     transform: translateY(-20px);
 }
@@ -575,24 +602,32 @@ body {
     transform: translateY(20px);
 }
 
+/* Image styling within pasta category cards */
 .pasta-category-card img {
-    width: 100%;
-    max-height: 100%;
+    width: 90%;
+    max-height: 90%;
     object-fit: cover;
     border-radius: 8px;
-    border: 2px solid #8b5146;
-    padding-top: 30%;
-    padding-bottom: 30%;
+    border: 2px solid #5A6A50;
+    padding-top: 20%;
+    padding-bottom: 20%;
     padding-left: 5%;
     padding-right: 5%;
 }
 
+/* Heading styling inside category cards */
+.pasta-category-card h2 {
+    color: #5A6A50
+}
+
+/* Links styling */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-@media (max-width: 1024px) {
+/* BREAKPOINT: Responsive pasta cards layout for mobile */
+@media (max-width: 768px) {
     .pasta-category-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -603,22 +638,14 @@ a {
     }
 }
 
-@media (max-width: 600px) {
-    .pasta-category-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .pasta-category-card:nth-child(odd),
-    .pasta-category-card:nth-child(even) {
-        transform: none;
-    }
-}
 
 
 
+/* ============ */
+/*  PASTA POST  */
+/* ============ */
 
-/* PASTA POST */
-
+/* Main section layout for individual pasta post pages */
 .pasta-post-info-section {
     display: flex;
     justify-content: space-between;
@@ -633,6 +660,7 @@ a {
     margin-top: 5%;
 }
 
+/* Container for pasta image */
 .image-container {
     flex: 1;  
     display: flex;
@@ -640,6 +668,7 @@ a {
     max-width: 100%;
 }
 
+/* Pasta image styling */
 .image-container img {
     width: 100%; 
     max-width: 100%;
@@ -649,6 +678,7 @@ a {
     border-radius: 8px;
 }
 
+/* Container for text about the pasta */
 .info-text {
     flex: 1;
     text-align: left;
@@ -658,6 +688,7 @@ a {
     font-size: 1.2rem;
 }
 
+/* BREAKPOINT: Responsive pasta posts layout for mobile */
 @media (max-width: 768px) {
     .pasta-post-info-section {
         flex-direction: column; 
@@ -681,27 +712,45 @@ a {
     }
 }
 
+
+
+
+/* ============ */
+/*  BREADCRUMB  */
+/* ============ */
+
+/* Container styling for breadcrumb nav */
 ul.breadcrumb {
   padding: 10px 16px;
   list-style: none;
   background-color: #864E47;
 }
+
+/* Breadcrumb list items displayed inline */
 ul.breadcrumb li {
   display: inline;
   font-size: 18px;
 }
+
+/* Slash between breadcrumb items */
 ul.breadcrumb li+li:before {
   padding: 8px;
   color: black;
   content: "/\00a0";
 }
+
+/* Styling for breadcrumb links */
 ul.breadcrumb li a {
   color: #C5B79F;
   text-decoration: none;
 }
+
+/* Hover effect for breadcrumb links */
 ul.breadcrumb li a:hover {
   color: black;
 }
+
+/* Current breadcrumb item */
 ul.breadcrumb li:current {
   color: #ECDCBF;
 }
@@ -709,8 +758,11 @@ ul.breadcrumb li:current {
 
 
 
-  /* MAP */
+/* ===== */
+/*  MAP  */
+/* ===== */
 
+/* Styling for the interactive map container */
 #map {
     margin: 0 auto;
     width: 65%;
@@ -720,6 +772,23 @@ ul.breadcrumb li:current {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Custom font for Leaflet popups on the map */
 .leaflet-popup-content {
     font-family: 'Copse', serif;
+}
+
+
+
+
+/* ============ */
+/*  SCROLL BAR  */
+/* ============ */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #5A6A50, #C5B79F, #8b5146);
+    border-radius: 5px;
 }
