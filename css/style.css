@@ -37,7 +37,6 @@ nav {
     justify-content: space-between;
     z-index: 1000;
     background-color: #864E47;
-    
 }
 
 nav img {
@@ -55,8 +54,8 @@ nav a img {
 nav ul {
     display: flex;
     gap: 20px;
-    list-style:
-    none; margin: 0;
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
@@ -97,12 +96,21 @@ nav li a {
     z-index: 1001;
 }
 
+/* General styles for mobile and desktop */
+nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
 /* BREAKPOINT: Responsive nav adjustments for mobile */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     .hamburger {
       display: block;
-      top: 5%;
-      right: 0%;
+      position: absolute;
+      top: 25px;
+      right: 10px;
       z-index: 1001;
     }
 
@@ -114,8 +122,6 @@ nav li a {
       width: 100%;
       top: 100px;
       right: 0;
-      width: 80vw;
-      height: 30vh;
       background-color: #864E47;
       padding: 20px;
       z-index: 1000;
@@ -124,7 +130,7 @@ nav li a {
 
     .nav-links.active {
       display: flex;
-      position: absolute;
+      position: relative;
       top: 100px;
       padding: 20px;
       z-index: 1000;
@@ -145,19 +151,20 @@ nav li a {
       border-bottom: 1px solid black;
       padding-bottom: 10px;
       margin-bottom: 10px;
-      width: 80%;
+      width: 100%;
       display: block;
-      
     }
 
     nav li:last-child {
         border-bottom: none;
     }
-}
 
-/* Make all images align to the middle of text lines */
-img {
-    vertical-align: middle;
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
 }
 
 
@@ -237,7 +244,7 @@ footer {
 }
 
 /* BREAKPOINT: Responsive footer adjustments for mobile */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     .footer-content {
         align-items: flex-start;
     }
@@ -329,7 +336,7 @@ p {
 }
 
 /* BREAKPOINT: Responsive font adjustments for mobile */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     h1 {
       font-size: 2rem;
     }
@@ -432,7 +439,7 @@ p {
 }
 
 /* BREAKPOINT: Responsive slideshow adjustments for mobile */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 768px) {
     .text {
       font-size: 11px;
     }
@@ -562,7 +569,7 @@ p {
 }
 
 /* BREAKPOINT: Responsive pasta cards layout for mobile */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     .pasta-grid {
         grid-template-columns: repeat(1, 1fr);
         grid-template-columns: 1fr;
@@ -655,7 +662,7 @@ a {
 }
 
 /* BREAKPOINT: Responsive pasta cards layout for mobile */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     .pasta-category-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -717,7 +724,7 @@ a {
 }
 
 /* BREAKPOINT: Responsive pasta posts layout for mobile */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     .pasta-post-info-section {
         flex-direction: column; 
         padding: 10%;
