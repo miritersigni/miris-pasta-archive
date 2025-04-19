@@ -255,11 +255,11 @@ footer {
     }
 
     .contact ul {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .footer-note {
-        font-size: 1rem;
+        font-size: 0.6rem;
         text-align: center;
     }
 }
@@ -342,7 +342,7 @@ p {
     }
   
     h2 {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
   
     p {
@@ -473,7 +473,7 @@ p {
 
 
 /* ================= */
-/*  ABOUT & HISTORY  */
+/*       ABOUT       */
 /* ================= */
 
 /* Headline section style */
@@ -517,6 +517,25 @@ p {
 .contact ul {
     list-style: none;
     padding: 0;
+}
+
+/* BREAKPOINT: Responsive about page layout for mobile */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        padding: 30px;
+        max-width: 90%;
+        gap: 20px;
+    }
+
+    .image-container img {
+        width: 100%;
+    }
+
+    .headline-section {
+        padding: 40px 20px;
+        text-align: center;
+    }
 }
 
 
@@ -665,6 +684,16 @@ a {
 @media (max-width: 768px) {
     .pasta-category-grid {
         grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .pasta-category-card {
+        padding: 20px;
+    }
+
+    .pasta-category-card img {
+        padding: 5%;
     }
 
     .pasta-category-card:nth-child(odd),
